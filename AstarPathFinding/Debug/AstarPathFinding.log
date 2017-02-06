@@ -1,0 +1,5 @@
+﻿  PathAStar.cpp
+c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(30): warning C4018: '<': signed/unsigned mismatch
+c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(40): warning C4018: '<': signed/unsigned mismatch
+  AstarPathFinding.vcxproj -> C:\Users\saniola\documents\visual studio 2015\Projects\AstarPathFinding\Debug\AstarPathFinding.exe
+  AstarPathFinding.vcxproj -> C:\Users\saniola\documents\visual studio 2015\Projects\AstarPathFinding\Debug\AstarPathFinding.pdb (Partial PDB)
