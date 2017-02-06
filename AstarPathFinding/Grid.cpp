@@ -20,34 +20,33 @@ void Grid::manageGrid(int obstacles) {
 	}
 }
 
-int Grid::distance(Node start, Node end) {
+int Grid::distance(Node *start, Node *end) {
 	int deltax, deltay;
-	deltax = (start.x > end.x) ? start.x - end.x : end.x - start.x;
-	deltay = (start.y > end.y) ? start.y - end.y : end.y - start.y;
+	deltax = (start->x > end->x) ? start->x - end->x : end->x - start->x;
+	deltay = (start->y > end->y) ? start->y - end->y : end->y - start->y;
 
 	return ((deltax > deltay) ? 10 * (deltax - deltay) + 14 * (deltay):10 * (deltay - deltax) + 14 * (deltax));
 }
 
-Node Grid::getNode(int mx, int my) {
+Node *Grid::getNode(int mx, int my) {
 	if (my < grid.size() && mx < grid[0].size())
-		return grid[y-my-1][mx];
+		return &grid[y-my-1][mx];
 	std::cout << "Argument Out of range please try again" << std::endl;
-	return Node(0, 0, 0, 0, 1);
+	return &Node(0, 0, 0, 0, 1);
 }
 
-std::vector<Node> Grid::neighbours(int x, int y) {
-	std::vector<Node> vectorOfneighbours;
-	Node myNode = getNode(x, y);
+std::vector<Node*> Grid::neighbours(int x, int y) {
+	std::vector<Node*> vectorOfneighbours;
+	Node *myNode = getNode(x, y);
 	for (int i = -1; i < 2; i++) {
 		for (int j = -1; j < 2; j++)
-			if (getNode(myNode.x + i, myNode.y + j).status != 1 && (i!=0 || j!=0) )
-				vectorOfneighbours.push_back(getNode(myNode.x + i, myNode.y + j));
+			if (getNode(myNode->x + i, myNode->y + j)->status != 1 && (i!=0 || j!=0) )
+				vectorOfneighbours.push_back(getNode(myNode->x + i, myNode->y + j));
 	}
 	return vectorOfneighbours;
 }
 
 void Grid::ReadGrid() {
-	
 	for (int i = 0; i < grid.size(); i++) {
 		for (int j = 0; j < grid[0].size(); j++) {
 			std::cout << grid[i][j].status;
