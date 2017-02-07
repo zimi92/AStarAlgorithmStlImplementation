@@ -5,11 +5,11 @@ void func(Node nd) {
 }
 
 int main() {
-	Grid grid(5,10);
-	grid.manageGrid(10);
-	grid.ReadGrid();
-	Node *start= new Node(1,1,0,0,0);
-	Node * end = new Node(3, 6, 0, 0, 0);
+	//Grid grid(5,10);
+	//grid.manageGrid(10);
+	//grid.ReadGrid();
+	Node *start= new Node(0,2,0,0,13);
+	Node * end = new Node(5, 2, 0, 0, 14);
 	//std::vector<Node> nodes = grid.ne
 	Node temp(0, 0, 0, 0, 0);
 	//std::vector<Node> gridNeg = grid.neighbours(1,1);
@@ -17,7 +17,7 @@ int main() {
 	//	std::cout << gridNeg[i].x << " " << gridNeg[i].y << " " << gridNeg[i].status << std::endl;
 	PathAStar star;
 	star.FindingPath(start, end);
-	grid.ReadGrid();
+	//grid.ReadGrid();
 	getchar();
 	return 0;
 }

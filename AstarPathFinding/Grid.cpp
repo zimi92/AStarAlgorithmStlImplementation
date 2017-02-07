@@ -1,7 +1,5 @@
 #include "Grid.h"
 
-
-
 Grid::Grid(int _x, int _y):x(_x), y(_y)
 {
 }
@@ -40,8 +38,10 @@ std::vector<Node*> Grid::neighbours(int x, int y) {
 	Node *myNode = getNode(x, y);
 	for (int i = -1; i < 2; i++) {
 		for (int j = -1; j < 2; j++)
-			if (getNode(myNode->x + i, myNode->y + j)->status != 1 && (i!=0 || j!=0) )
-				vectorOfneighbours.push_back(getNode(myNode->x + i, myNode->y + j));
+			if (getNode(myNode->x + i, myNode->y + j)->status != 1 && (i != 0 || j != 0)) {
+				Node *newNode = getNode(myNode->x + i, myNode->y + j);
+				vectorOfneighbours.push_back(newNode);
+			}
 	}
 	return vectorOfneighbours;
 }
