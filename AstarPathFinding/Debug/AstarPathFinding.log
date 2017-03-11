@@ -1,9 +1,9 @@
 ﻿  PathAStar.cpp
-c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(39): warning C4018: '<': signed/unsigned mismatch
-c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(73): warning C4018: '<': signed/unsigned mismatch
-c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(94): warning C4018: '<': signed/unsigned mismatch
-c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(101): warning C4018: '<': signed/unsigned mismatch
-c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(113): warning C4018: '<': signed/unsigned mismatch
-c:\users\saniola\documents\visual studio 2015\projects\astarpathfinding\astarpathfinding\pathastar.cpp(114): warning C4018: '<': signed/unsigned mismatch
-  AstarPathFinding.vcxproj -> C:\Users\saniola\Documents\Visual Studio 2015\Projects\AstarPathFinding\Debug\AstarPathFinding.exe
-  AstarPathFinding.vcxproj -> C:\Users\saniola\Documents\Visual Studio 2015\Projects\AstarPathFinding\Debug\AstarPathFinding.pdb (Partial PDB)
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(36): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(68): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(90): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(97): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(108): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(109): warning C4018: '<': signed/unsigned mismatch
+  AstarPathFinding.vcxproj -> C:\programmingProjects\AstarPathFinding\Debug\AstarPathFinding.exe
+  AstarPathFinding.vcxproj -> C:\programmingProjects\AstarPathFinding\Debug\AstarPathFinding.pdb (Partial PDB)

@@ -29,7 +29,6 @@ int Grid::distance(Node *start, Node *end) {
 Node *Grid::getNode(int mx, int my) {
 	if (my < grid.size() && mx < grid[0].size())
 		return &grid[y-my-1][mx];
-	std::cout << "Argument Out of range please try again" << std::endl;
 	return &Node(0, 0, 0, 0, 1);
 }
 
