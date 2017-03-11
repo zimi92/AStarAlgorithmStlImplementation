@@ -6,21 +6,26 @@ PathAStar::PathAStar()
 {
 	grid = new Grid(10, 10);
 	grid->manageGrid(10);
+
 	ReadMyGrid();
 }
 
 void PathAStar::FindingPath(Node *start, Node *finish) {
 	start->hValue = grid->distance(start, finish);
 	start->gValue = 0;
+	grid->setNode(start->x, start->y, 2);
 	open.push_back(start);
-	Node *current = new Node(0,0,0,0,0);
+	Node *current = start;//new Node(0, 0, 0, 0, 0);
 	while (!open.empty()) {
-		std::cout << current->x << " " << current->y << " current\n";
+		//ReadMyGrid();
+		//std::cout << "\n";
+		//std::cout << current->x << " " << current->y << " current\n";
+		
 		int currentPosition = getLowestFValue(open);
 		if (current->x == finish->x && current->y == finish->y)
 		{
 			current->status = 5;
-			std::cout << "SUCCESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+			std::cout << "A way has been found\n";
 			ReadMyGrid();
 			getRoute(finish, start);
 			return;
@@ -61,7 +66,8 @@ void PathAStar::getRoute(Node *end, Node *beggining) {
 	beggining->status = 2;
 	
 	while (temp->x != beggining->x || temp->y != beggining->y) {
-		std::cout << "Route:\n" << temp->x <<" "<< temp->y;
+		//std::cout << " Route:\n" << temp->x <<" "<< temp->y;
+		Route.push_back(temp);
 		std::vector <Node*> neighbours = grid->neighbours(temp->x, temp->y);
 		temp->status = 5;
 		for (int i = 0; i < neighbours.size(); i++) {
@@ -83,8 +89,8 @@ void PathAStar::getRoute(Node *end, Node *beggining) {
 				}
 			}
 		}
-		Route.push_back(temp);
 	}
+	Route.push_back(temp);
 	for (int i = 0; i < Route.size(); i++) {
 		std::cout << Route[i]->x << " " << Route[i]->y << " " << Route[i]->status << "\n";
 	}
@@ -93,7 +99,7 @@ void PathAStar::getRoute(Node *end, Node *beggining) {
 int PathAStar::getLowestFValue(std::vector<Node*> v) {
 	int first = 0;
 	for (int i = 0; i < v.size(); i++) {
-		std::cout << v[i]->fValue() << "fValue\n";
+		//std::cout << v[i]->fValue() << "fValue\n";
 		if (v[i]->fValue() < v[first]->fValue())
 			first = i;
 		else if(v[i]->fValue() == v[first]->fValue())

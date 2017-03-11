@@ -14,6 +14,7 @@ public:
 	void ReadGrid();
 	int distance(Node *start, Node *end);
 	Node *getNode(int x, int y);
+	void setNode(int x, int y, int status);
 	std::vector<Node*> neighbours(int x, int y);
 	~Grid();
 };

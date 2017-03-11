@@ -33,6 +33,11 @@ Node *Grid::getNode(int mx, int my) {
 	return &Node(0, 0, 0, 0, 1);
 }
 
+void Grid::setNode(int mx, int my, int status) {
+	if (my < grid.size() && mx < grid[0].size())
+		grid[y - my - 1][mx].status = status;
+}
+
 std::vector<Node*> Grid::neighbours(int x, int y) {
 	std::vector<Node*> vectorOfneighbours;
 	Node *myNode = getNode(x, y);
