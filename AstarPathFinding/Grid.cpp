@@ -9,13 +9,17 @@ void Grid::manageGrid(int obstacles) {
 	for (int i = y-1; i >= 0; i--) {
 		for (int j = 0; j < x; j++) {
 			Node node(j, i, 0, 0, 0);
-			if ((i == 2 && j == 3) || (i==0 && j == 0))
-				node.status = 1;
 			gridPart.push_back(node);
 		}
 		grid.push_back(gridPart);
 		gridPart.clear();
 	}
+	grid[5][1].status = 1;
+	grid[5][2].status = 1;
+	grid[5][3].status = 1;
+	grid[5][4].status = 1;
+	grid[5][5].status = 1;
+	grid[5][6].status = 1;
 }
 
 int Grid::distance(Node *start, Node *end) {
@@ -50,7 +54,7 @@ std::vector<Node*> Grid::neighbours(int x, int y) {
 	return vectorOfneighbours;
 }
 
-void Grid::ReadGrid() {
+void Grid::readGrid() {
 	for (int i = 0; i < grid.size(); i++) {
 		for (int j = 0; j < grid[0].size(); j++) {
 			std::cout << grid[i][j].status;

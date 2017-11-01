@@ -1,9 +1,9 @@
 ﻿  PathAStar.cpp
-c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(36): warning C4018: '<': signed/unsigned mismatch
-c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(68): warning C4018: '<': signed/unsigned mismatch
-c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(90): warning C4018: '<': signed/unsigned mismatch
-c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(97): warning C4018: '<': signed/unsigned mismatch
-c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(108): warning C4018: '<': signed/unsigned mismatch
-c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(109): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(39): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(71): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(93): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(100): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(111): warning C4018: '<': signed/unsigned mismatch
+c:\programmingprojects\astarpathfinding\astarpathfinding\pathastar.cpp(112): warning C4018: '<': signed/unsigned mismatch
   AstarPathFinding.vcxproj -> C:\programmingProjects\AstarPathFinding\Debug\AstarPathFinding.exe
   AstarPathFinding.vcxproj -> C:\programmingProjects\AstarPathFinding\Debug\AstarPathFinding.pdb (Partial PDB)

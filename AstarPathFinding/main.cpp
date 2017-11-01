@@ -1,23 +1,27 @@
 #include "Grid.h"
 #include "PathAStar.h"
-void func(Node nd) {
-	std::cout << nd.x << " " << nd.y << " " << nd.status << std::endl;
-}
 
-int main() {
-	//Grid grid(5,10);
-	//grid.manageGrid(10);
-	//grid.ReadGrid();
-	Node *start= new Node(0,2,0,0,13);
-	Node * end = new Node(5, 2, 0, 0, 14);
-	//std::vector<Node> nodes = grid.ne
-	Node temp(0, 0, 0, 0, 0);
-	//std::vector<Node> gridNeg = grid.neighbours(1,1);
-	//for(int i = 0; i < gridNeg.size(); i++)
-	//	std::cout << gridNeg[i].x << " " << gridNeg[i].y << " " << gridNeg[i].status << std::endl;
+int main(int argc, const char * argv[]) {
+	std::pair<int, int> startPoint;
+	std::pair<int, int> finishPoint;
+
+	if (argc != 5) 
+	{
+		std::cout << "there is not enough arguments to run algorythm, we will use default ones" << std::endl;
+		startPoint.first = 1;
+		startPoint.second = 1;
+		finishPoint.first = 7;
+		finishPoint.second = 9;
+	}
+	else 
+	{
+		startPoint.first = static_cast<int>(*argv[1] + '0');
+		startPoint.second = static_cast<int>(*argv[2] + '0');
+		finishPoint.first = static_cast<int>(*argv[3] + '0');
+		finishPoint.second = static_cast<int>(*argv[4] + '0');
+	}
 	PathAStar star;
-	star.FindingPath(start, end);
-	//grid.ReadGrid();
+	star.findingPath(startPoint.first, startPoint.second, finishPoint.first, finishPoint.second);
 	getchar();
 	return 0;
 }

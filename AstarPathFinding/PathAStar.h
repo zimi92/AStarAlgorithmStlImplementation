@@ -8,12 +8,12 @@ public:
 	std::vector<Node*> path;
 	std::vector<Node*> open;
 	std::vector<Node*> close;
-	std::vector<Node*> Route;
+	std::vector<Node*> route;
 
 	void getRoute(Node *end, Node *finish);
-	void ReadMyGrid();
+	void readMyGrid();
 	int getLowestFValue(std::vector<Node*> v);
-	void FindingPath(Node *start, Node *finish);
+	void findingPath(int, int, int, int);
 	PathAStar();
 	~PathAStar();
 };
